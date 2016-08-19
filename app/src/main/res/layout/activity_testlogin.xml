@@ -11,18 +11,18 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button_connect"
+        android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="连接,并告诉服务器我已准备简监听"/>
+        android:text="login"/>
 
     <Button
-        android:id="@+id/button_disconnect"
+        android:id="@+id/button_cent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="断开"/>
+        android:text="cent"/>
 
     <Button
         android:id="@+id/button_sent"
@@ -30,17 +30,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="再次发送一条消息"/>
-
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="登陆"/>
-
-    <Button
-        android:id="@+id/button_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="登出"/>
 
 </LinearLayout>

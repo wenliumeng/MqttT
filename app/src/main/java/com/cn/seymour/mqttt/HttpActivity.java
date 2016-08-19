@@ -144,14 +144,6 @@ public class HttpActivity extends AppCompatActivity implements View.OnClickListe
                         e.printStackTrace();
                     }
 
-//                    new Thread(){
-//                        @Override
-//                        public void run() {
-//
-//                        }
-//                    }.start();
-
-
                 }
             } catch (Exception e) {
                 handler.sendEmptyMessage(5);

@@ -26,6 +26,8 @@
             android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
         <activity android:name=".HttpActivityBack"
             android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
+        <activity android:name=".TestLogin"
+            android:theme="@style/Theme.Design.Light.NoActionBar"></activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET"/>

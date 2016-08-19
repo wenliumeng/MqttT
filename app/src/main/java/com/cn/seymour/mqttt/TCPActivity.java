@@ -98,7 +98,9 @@ public class TCPActivity extends AppCompatActivity {
         buttonIP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Constant.ip = editTextIP.getText().toString();
+                Constant.ip = editTextIP.getText().toString().substring(0,13);
+                Constant.port = editTextIP.getText().toString().substring(14,18);
+                System.out.println(Constant.ip +" " +Constant.port);
             }
         });
 

@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="192.168.1.222:9998" />
+            android:text="192.168.1.222:9997" />
 
         <Button
             android:id="@+id/button_ip"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="14sp"
-            android:text="A55A18020102030405060708404B59440101000010071C010001E855AA" />
+            android:text="A55A180201020304050607084C515A535105000010071F0100012255AA" />
     </LinearLayout>
 
     <LinearLayout
@@ -257,7 +257,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="12sp"
-            android:text="A55A1B050102030405060708404B59440105000010071C220507020001D255AA" />
+            android:text="A55A180501020304050607084C515A535101100010071F01070502FFFF2255AA" />
     </LinearLayout>
 
     <LinearLayout

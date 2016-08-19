@@ -23,4 +23,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="http" />
+
+    <Button
+        android:id="@+id/buttontextlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="测试不登录访问接口" />
+
 </LinearLayout>

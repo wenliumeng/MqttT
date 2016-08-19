@@ -20,6 +20,7 @@ public class Main extends AppCompatActivity {
     Button buttonmqtt;
     Button buttontcp;
     Button buttonhttp;
+    Button buttontestlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,15 @@ public class Main extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(context,HttpActivityBack.class);
+                startActivity(intent);
+            }
+        });
+        buttontestlogin = (Button)findViewById(R.id.buttontextlogin);
+        buttontestlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(context,TestLogin.class);
                 startActivity(intent);
             }
         });
