@@ -135,7 +135,8 @@ public class HttpActivityBack extends AppCompatActivity implements View.OnClickL
                     public void run() {
                         try {
 //                            URL url = new URL("http://192.168.1.222:8080/QiwuOffice/ajaxlogin.json?j_username=13688888888&j_password=4");
-                            URL url = new URL("http://192.168.1.222:8080/QiwuOffice/ajaxlogin.json?j_username=123&j_password=1");
+                            URL url = new URL("http://192.168.1.222:8080/QiwuOffice/ajaxlogin.json?social=1&j_username=123&j_password=1");
+//                            URL url = new URL("http://192.168.1.222:8080/QiwuOffice/admin/user/sociallogin.json?usid=D3525FD929E1898FB53FCB5B56DE2FCF&socialname=QQ");
                             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                             InputStream inputStream = conn.getInputStream();
                             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
@@ -149,8 +150,8 @@ public class HttpActivityBack extends AppCompatActivity implements View.OnClickL
                             Iterator iterator = set.iterator();
                             while (iterator.hasNext()) {
                                 Object o = iterator.next();
-                                if (o != null && o.toString().equals("Set-Cookie")) {
-                                    JSESSION = conn.getHeaderField("Set-Cookie").substring(11,43);
+                                if (o != null && o.toString().equals("Set-JSESSIONID")) {
+                                    JSESSION = conn.getHeaderField("Set-JSESSIONID").substring(11,43);
                                 }
                             }
                             inputStream.close();
@@ -171,12 +172,19 @@ public class HttpActivityBack extends AppCompatActivity implements View.OnClickL
                     public void run() {
                         URL url = null;
                         try {
-                            url = new URL("http://192.168.1.222:8080/QiwuOffice/j_spring_security_logout");
+                            url = new URL("http://192.168.1.222:8080/QiwuOffice/base/baseDevice/getdeviceslist.json?username=123");
                             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                             System.out.println(JSESSION);
                             conn.setRequestProperty("Cookie", "JSESSIONID=" + JSESSION);
                             conn.connect();
-                            System.out.println(conn.getResponseCode());
+                            InputStream inputStream = conn.getInputStream();
+                            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                            String line;
+                            String buff = "";
+                            while ((line = bufferedReader.readLine()) != null) {
+                                buff = line + buff;
+                            }
+                            System.out.println(conn.getResponseCode()+buff);
                             handler.sendEmptyMessage(101);
                         } catch (Exception e) {
                             e.printStackTrace();
